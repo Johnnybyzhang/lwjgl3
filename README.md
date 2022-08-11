@@ -45,16 +45,16 @@ configuration options.
 
 #### Requirements
 
-- JDK 8 arm64
-- JDK 17 arm64
+- ZuluJDK 8 arm64
+- ZuluJDK 17 arm64
 - Ant
 - XCode/MacOS SDK
 
 #### Instructions
 
 ```sh
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-export JAVA8_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 ant compile-templates
 ant generate
 # patch the generated code to no-op "nglfwSetWindowIcon", otherwise throws error on Minecraft 1.17 and before
